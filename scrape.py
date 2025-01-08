@@ -14,6 +14,8 @@ AUTH = os.getenv('AUTH')
 SBR_WEBDRIVER = os.getenv('SBR_WEBDRIVER')
 
 # def scrape_website(website):
+#     if you want to use the local chromedriver
+
 #     print("Launching Chrome")
 #     chrome_driver_path = "./chromedriver.exe"
 
@@ -32,6 +34,7 @@ SBR_WEBDRIVER = os.getenv('SBR_WEBDRIVER')
 
 
 def scrape_website(website):
+    # if you want to use the remote chromedriver to bypass the captcha
     print("Launching Chrome")
     sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, 'goog', 'chrome')
     with Remote(sbr_connection, options=ChromeOptions()) as driver:
