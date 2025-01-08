@@ -27,7 +27,9 @@ To install the AI Scrapper, follow these steps:
    ```
 4. Update the API key in the .env file
 
-5. Run the project
+5. Register an account on BrightData to get the AUTH and SBR_WEBDRIVER in the .env file
+
+6. Run the project
    ```
    python main.py
    ```

@@ -4,8 +4,14 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import Remote, ChromeOptions
 from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
 from selenium.webdriver.common.by import By
-AUTH = 'brd-customer-hl_b1270250-zone-ai_scrapper:ffv0mp3eiiye'
-SBR_WEBDRIVER = f'https://{AUTH}@brd.superproxy.io:9515'
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+AUTH = os.getenv('AUTH')
+SBR_WEBDRIVER = os.getenv('SBR_WEBDRIVER')
 
 # def scrape_website(website):
 #     print("Launching Chrome")
@@ -39,7 +45,6 @@ def scrape_website(website):
         return html
     print('Scraping complete')
 
-from bs4 import BeautifulSoup
 def extract_body_content(html):
     soup = BeautifulSoup(html, 'html.parser')
     body = soup.find('body')
