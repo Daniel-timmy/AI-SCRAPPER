@@ -15,7 +15,7 @@ To install the AI Scrapper, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/ai-scrapper.git
+   git clone https://github.com/Daniel-timmy/ai-scrapper.git
    ```
 2. Navigate to the project directory:
    ```sh
